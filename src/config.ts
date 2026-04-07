@@ -7,10 +7,12 @@ export interface ApplicationConfig {
 	theme: ApplicationTheme;
 }
 
+const BASE_URL_ARRAY = process.env.BASE_URL_ARRAY.split(",");
+
 const config: ApplicationConfig = {
 	application_name: 'Turf Builder',
 	logo_src: '/logos/default_logo.svg',
-	base_origins: ['https://turfbuilder.org', 'https://www.turfbuilder.org'],
+	base_origins: BASE_URL_ARRAY,
 	theme: {
 		primaryColor: '',
 		secondaryColor: ''
