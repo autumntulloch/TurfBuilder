@@ -1,19 +1,4 @@
 services:
-  postgres:
-    platform: linux/amd64
-    image: postgis/postgis:18-3.6
-    container_name: turfbuilder_postgres
-    ports:
-      - '5432:5432'
-    volumes:
-      - postgres_data:/var/lib/postgresql
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=db_password
-      - POSTGRES_DB=postgres
-      - TZ=${TZ}
-    shm_size: 128mb
-    restart: ${RESTART_POLICY}
 
   frontend:
     container_name: turfbuilder_app
@@ -49,5 +34,4 @@ services:
     volumes:
       - nats_data:/data/jetstream
 volumes:
-  postgres_data:
   nats_data:
