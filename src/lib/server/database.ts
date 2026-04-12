@@ -2,7 +2,7 @@ import { Pool, type PoolClient } from 'pg';
 import { env } from '$env/dynamic/private';
 
 export const POOL = new Pool({
-	connectionString: env.DATABASE_URL
+	connectionString: env.DATABASE_URL,
 	ssl: {
 	rejectUnauthorized: true,
 	ca: process.env.DATABASE_CA_CERT,
