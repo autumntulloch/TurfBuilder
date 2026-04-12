@@ -3,10 +3,10 @@ import { env } from '$env/dynamic/private';
 
 export const POOL = new Pool({
 	connectionString: env.DATABASE_URL,
-//	ssl: {
-//	rejectUnauthorized: true,
+	ssl: {
+	rejectUnauthorized: false,
 //	ca: process.env.DATABASE_CA_CERT,
-//	},
+	},
 });
 
 export const AUTH_POOL = new Pool({
