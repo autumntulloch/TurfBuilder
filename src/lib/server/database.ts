@@ -9,7 +9,7 @@ export const POOL = new Pool({
   password: process.env.DB_PASSWORD,
   ssl: {
     rejectUnauthorized: true,
-    ca: process.env.DATABASE_CA_CERT,
+    ca: process.env.DB_CA_CERT,
   },
 
   max: 10,                     // Maximum connections in pool
@@ -25,7 +25,7 @@ export const AUTH_POOL = new Pool({
   password: process.env.DB_PASSWORD,
   ssl: {
     rejectUnauthorized: true,
-    ca: process.env.DATABASE_CA_CERT,
+    ca: process.env.DB_CA_CERT,
   },
 
 	options: '-c search_path=auth'
