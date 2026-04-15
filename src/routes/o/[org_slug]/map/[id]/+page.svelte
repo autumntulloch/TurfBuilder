@@ -296,7 +296,7 @@
 				variant="primary"
 				class="w-full"
 			>
-				Open Location
+				Attempt Contact
 			</Button>
 		</div>
 	{/if}
