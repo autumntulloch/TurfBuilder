@@ -29,7 +29,7 @@ export default defineConfig({
 			allow: [searchForWorkspaceRoot(process.cwd()), mainRepoRoot]
 			
 		},
-		allowedHosts: process.env.BASE_URL_ARRAY?.split(',')
+		allowedHosts: (process.env.BASE_URL_ARRAY?.split(',').toString() || '').split(',').map((host) => host.trim()).filter(Boolean)
 	},
 	test: {
 		expect: { requireAssertions: true },
