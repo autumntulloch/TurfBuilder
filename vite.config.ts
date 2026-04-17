@@ -27,7 +27,9 @@ export default defineConfig({
 			// Allow serving files from the main repo root (needed for git worktrees
 			// where node_modules is in the main repo, not the worktree)
 			allow: [searchForWorkspaceRoot(process.cwd()), mainRepoRoot]
-		}
+			
+		},
+		allowedHosts: process.env.BASE_URL_ARRAY?.split(',')
 	},
 	test: {
 		expect: { requireAssertions: true },
