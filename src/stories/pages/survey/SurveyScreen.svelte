@@ -23,6 +23,7 @@
 		locality: string;
 		region: string;
 		postcode: string;
+		residents: string;
 	}
 
 	interface Props {
@@ -68,6 +69,10 @@
 	<section>
 		<h1 class="text-2xl font-bold text-on-surface">{location.location_name}</h1>
 		<p class="text-base text-on-surface-subtle mt-1">{location.street}</p>
+		<br />
+		{#if location.residents}
+			<p class="text-base text-on-surface">{location.residents}</p>
+		{/if}
 	</section>
 
 	<hr class="border-outline-subtle" />
