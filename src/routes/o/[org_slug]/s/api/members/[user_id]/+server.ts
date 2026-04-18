@@ -82,8 +82,7 @@ export async function DELETE({ params, locals }) {
 		const adminCheckResult = await client.query(
 			`SELECT COUNT(*) FROM org_user_role ur
 			 JOIN org_role r ON r.id = ur.role_id
-			 WHERE ur.org_id = $1 AND r.is_owner = true AND ur.user_id = $2
-			 FOR UPDATE`,
+			 WHERE ur.org_id = $1 AND r.is_owner = true AND ur.user_id = $2`,
 			[locals.organization!.id, params.user_id]
 		);
 		const userIsAdmin = parseInt(adminCheckResult.rows[0].count) > 0;
