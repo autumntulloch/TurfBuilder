@@ -30,3 +30,7 @@ storybook-static
 /.volumes
 
 *.crt
+
+# LGP
+
+lgp_*
