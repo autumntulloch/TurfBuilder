@@ -293,6 +293,7 @@ export async function up(pgm: MigrationBuilder): Promise<void> {
 		postcode: 'text',
 		region: 'text',
 		country: 'text',
+		residents: 'text',
 		latitude: { type: 'numeric(10, 8)', notNull: true },
 		longitude: { type: 'numeric(11, 8)', notNull: true },
 		geom: { type: 'geometry(point, 4326)' },

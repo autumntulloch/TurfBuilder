@@ -24,7 +24,7 @@ export async function load({ locals, params }) {
 		const surveyId = surveyResult.rows[0].survey_id;
 
 		const location = await client.query(
-			`SELECT location_name, street, locality, postcode, region FROM location WHERE id = $1`,
+			`SELECT location_name, street, locality, postcode, region, residents FROM location WHERE id = $1`,
 			[locationId]
 		);
 
