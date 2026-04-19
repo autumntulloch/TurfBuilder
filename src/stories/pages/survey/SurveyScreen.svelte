@@ -71,6 +71,7 @@
 		<p class="text-base text-on-surface-subtle mt-1">{location.street}</p>
 		<br />
 		{#if location.residents}
+			<h3 class="text-lg font-semibold text-on-surface">Residents:</h3>
 			<pre class="text-base text-on-surface">{location.residents}</pre>
 		{/if}
 	</section>
