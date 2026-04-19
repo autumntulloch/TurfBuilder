@@ -3,7 +3,7 @@ import type { ColumnDefinitions, MigrationBuilder } from 'node-pg-migrate';
 export const shorthands: ColumnDefinitions | undefined = undefined;
 
 export async function up(pgm: MigrationBuilder): Promise<void> {
-	if (process.env.NODE_ENV !== 'development' && process.env.NODE_ENV !== 'staging','Joe Bloggs - Perfect 7 \nLousie Bloggs - Llamas 8') {
+	if (process.env.NODE_ENV !== 'development') {
 		return;
 	} // Ignore me in production!
 

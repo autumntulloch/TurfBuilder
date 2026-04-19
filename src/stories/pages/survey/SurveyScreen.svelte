@@ -71,7 +71,7 @@
 		<p class="text-base text-on-surface-subtle mt-1">{location.street}</p>
 		<br />
 		{#if location.residents}
-			<p class="text-base text-on-surface">{location.residents}</p>
+			<pre class="text-base text-on-surface">{location.residents}</pre>
 		{/if}
 	</section>
 
